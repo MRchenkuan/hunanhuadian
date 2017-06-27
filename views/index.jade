@@ -1,0 +1,14 @@
+extends layout
+
+append head
+  script(src='/public/javascripts/index.js')
+  link(rel='stylesheet', href='/public/stylesheets/header.css')
+  link(rel='stylesheet', href='/public/stylesheets/footer.css')
+
+block header
+  include header
+block content
+  h1= title
+  p Welcome to #{title}
+block footer
+  include footer

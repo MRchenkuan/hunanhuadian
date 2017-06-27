@@ -1,0 +1,34 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-self: center; //本身的对齐方式
+  margin-top: 1rem;
+  border-top:.3rem solid #00AAE7;
+  border-bottom:.3rem solid #00AAE7;
+  background-color: #003C82;
+  color:#fff;
+  padding: 1rem 10%;
+
+  &>.intro{
+    line-height: 2.5;
+    font-weight: 300;
+    width: 66%;
+    &>.intro{
+      column-count: 2;
+
+    }
+  }
+  &>.contact{
+    width: 33%;
+    line-height: 2.5;
+    .icon{
+      color: #47a4de;
+      margin-right: 2rem;
+    }
+    .phone>span{
+      font-weight: 900;
+      font-size: 14px;
+    }
+  }
+}
