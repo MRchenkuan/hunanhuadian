@@ -1,14 +1,16 @@
-.carousel_frame,.news_frame,.intro_frame,.pictures_frame{
+.carousel_frame{
   width: 80vw;
   height:40vw;
   border:1px solid grey;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .news_frame{
   display: flex;
   justify-content: space-between;
   height: 25rem;
+  margin: 2rem auto;
+  width: 80vw;
   .news_carousel{
     width: 55%;
     border:1px solid grey;
@@ -55,6 +57,105 @@
       }
       .item:hover{
         color: #00AAE7;
+      }
+    }
+  }
+}
+
+.intro_frame{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 80vw;
+  margin: 2rem auto;
+  .card{
+    flex-basis: 21em;
+    height: 28em;
+    background: #FFFFFF;
+
+    border: 1px solid #A0C7D6;
+    box-shadow: 0 0 8px 0 rgba(147,194,236,0.50);
+    border-radius: 2px;
+    transition:all .3s ease;
+    position: relative;
+    &:hover{
+      border: 1px solid #0AC7D6;
+      box-shadow: 0 0 10px 0 #93C2E7;
+      .plus{
+        background: #93C2E7;
+        color:#FFFFFF;
+        border:1px solid #93C2E7;
+      }
+    }
+    .head{
+      height: 14em;
+      width: 100%;
+    }
+    .title{
+      padding: 1.5rem 1rem;
+      color: #003C82;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    .intro{
+      padding: 0 1rem;
+      font-weight: 100;
+      font-size: 1rem;
+      color: #4A4A4A;
+      line-height: 2;
+    }
+    .plus{
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1.5rem;
+      background: #FFFFFF;
+      color:#003C82;
+      font-size: 1.5rem;
+      border:1px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition:all .3s ease;
+    }
+  }
+}
+
+.pictures_frame{
+  width: 80vw;
+  height:20vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .pic{
+    position: relative;
+    flex-basis: 30%;
+    height: 100%;
+    background-size: cover;
+    .title{
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      font-weight: 500;
+      background: #00AAE7;
+      transition:all .3s ease;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover{
+      .title{
+        height: 3rem;
+        opacity: 1;
       }
     }
   }
