@@ -85,13 +85,19 @@ body {
       border-bottom: .3rem solid #00AAE7;
       background-color: #003C82;
       color: #fff;
-      padding: 1rem 10%; }
+      padding: 0 10%;
+      height: auto;
+      transition: 1s ease all; }
       body .header > .navDetail .column {
         list-style: none;
         width: 7rem; }
         body .header > .navDetail .column .item {
           padding: 1rem 0;
           font-weight: 100; }
+          body .header > .navDetail .column .item > a {
+            padding: .5rem 0; }
+            body .header > .navDetail .column .item > a:hover {
+              border-bottom: 1px solid #00AAE7; }
       body .header > .navDetail .padding {
         flex-grow: 5; }
 

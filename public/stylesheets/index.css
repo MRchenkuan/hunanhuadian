@@ -38,7 +38,7 @@
       justify-content: space-between;
       font-size: 1rem;
       list-style: none;
-      height: 100%; }
+      height: 40vw; }
       .news_frame .news_list .list .item {
         border-top: 1px solid #D8D8D8;
         height: 20%;
@@ -58,7 +58,7 @@
   width: 80vw;
   margin: 2rem auto; }
   .intro_frame .card {
-    flex-basis: 21em;
+    flex-basis: 22%;
     height: 28em;
     background: #FFFFFF;
     border: 1px solid #A0C7D6;
@@ -101,7 +101,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: all .3s ease; }
+      transition: all .3s ease;
+      line-height: 1.5rem; }
+      .intro_frame .card .plus:after {
+        content: '+'; }
 
 .pictures_frame {
   width: 80vw;
