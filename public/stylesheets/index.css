@@ -1,18 +1,49 @@
 .carousel_frame {
   width: 80vw;
-  height: 40vw;
+  height: 30vw;
   border: 1px solid grey;
-  margin: 2rem auto; }
+  margin: 1.5rem auto 2rem;
+  overflow: hidden; }
+  .carousel_frame .pice {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center; }
+    .carousel_frame .pice .text {
+      margin-top: 16vw;
+      margin-left: 7vw;
+      float: left; }
+      .carousel_frame .pice .text .title {
+        font-size: 3.5rem;
+        color: #fff; }
+      .carousel_frame .pice .text .subtitle {
+        font-size: 2rem;
+        color: #fff; }
 
 .news_frame {
   display: flex;
   justify-content: space-between;
   height: 25rem;
   margin: 2rem auto;
-  width: 80vw; }
+  width: 80vw;
+  overflow: hidden; }
+  .news_frame .pice {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+    .news_frame .pice .bottom-text {
+      height: 3rem;
+      background: rgba(0, 170, 231, 0.6);
+      color: #fff;
+      line-height: 3rem;
+      text-align: center;
+      bottom: 0;
+      position: absolute;
+      width: 100%; }
   .news_frame .news_carousel {
-    width: 55%;
-    border: 1px solid grey; }
+    width: 55%; }
   .news_frame .news_list {
     width: 40%;
     display: flex;
@@ -75,7 +106,9 @@
         border: 1px solid #93C2E7; }
     .intro_frame .card .head {
       height: 14em;
-      width: 100%; }
+      width: 100%;
+      background-size: cover;
+      background-position: center; }
     .intro_frame .card .title {
       padding: 1.5rem 1rem;
       color: #003C82;
@@ -120,7 +153,8 @@
     background-size: cover; }
     .pictures_frame .pic .title {
       width: 100%;
-      height: 0;
+      height: 3rem;
+      line-height: 3rem;
       overflow: hidden;
       position: absolute;
       bottom: 0;
@@ -129,12 +163,12 @@
       font-weight: 500;
       background: #00AAE7;
       transition: all .3s ease;
-      opacity: 0;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      background: rgba(0, 170, 231, 0.8); }
     .pictures_frame .pic:hover .title {
-      height: 3rem;
-      opacity: 1; }
+      height: 4rem;
+      line-height: 4rem; }
 
 /*# sourceMappingURL=index.css.map */

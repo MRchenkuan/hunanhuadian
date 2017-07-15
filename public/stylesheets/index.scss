@@ -1,8 +1,28 @@
 .carousel_frame{
   width: 80vw;
-  height:40vw;
+  height: 30vw;
   border:1px solid grey;
-  margin: 2rem auto;
+  margin: 1.5rem auto 2rem;
+  overflow: hidden;
+  .pice{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    .text{
+      margin-top: 16vw;
+      margin-left: 7vw;
+      float: left;
+      .title{
+        font-size: 3.5rem;
+        color: #fff;
+      }
+      .subtitle{
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .news_frame{
@@ -11,9 +31,26 @@
   height: 25rem;
   margin: 2rem auto;
   width: 80vw;
+  overflow: hidden;
+  .pice{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .bottom-text{
+      height: 3rem;
+      background: rgba(0,170,231,0.60);
+      color: #fff;
+      line-height: 3rem;
+      text-align: center;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
   .news_carousel{
     width: 55%;
-    border:1px solid grey;
   }
   .news_list{
     width: 40%;
@@ -91,6 +128,8 @@
     .head{
       height: 14em;
       width: 100%;
+      background-size: cover;
+      background-position: center;
     }
     .title{
       padding: 1.5rem 1rem;
@@ -142,7 +181,8 @@
     background-size: cover;
     .title{
       width: 100%;
-      height: 0;
+      height: 3rem;
+      line-height: 3rem;
       overflow: hidden;
       position: absolute;
       bottom: 0;
@@ -151,15 +191,15 @@
       font-weight: 500;
       background: #00AAE7;
       transition:all .3s ease;
-      opacity: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      background: rgba(0,170,231,0.80);
     }
     &:hover{
       .title{
-        height: 3rem;
-        opacity: 1;
+        height: 4rem;
+        line-height: 4rem;
       }
     }
   }

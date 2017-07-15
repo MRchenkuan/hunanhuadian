@@ -2,6 +2,7 @@ body{
   display: flex;
   flex-direction: column;
   $nav-height: 3rem;
+  $background-height: 21rem;
   .header{
     display: flex;
     flex-direction: column;
@@ -38,131 +39,146 @@ body{
     }
 
     // 导航菜单部分
-    &>.nav{
-      display: flex;
-      justify-content: space-between;
+    .nav-frame{
       width: 80%;
-      list-style: none;
-      align-self: center; //本身的对齐方式
-      align-items: flex-start; // 子元素的对齐方式
-      margin-top: 2.5rem;
+      margin: 2.5rem auto 0;
       position: relative;
-      height: $nav-height + 0.3;
-      overflow: hidden;
-      transition: .3s all ease;
-      &:hover{
-        height: 18 + $nav-height;
-        .background{
-          .board{
-            opacity: 1;
-            z-index: -1;
-          }
-        }
-      }
-      .background{
+      .search-widget{
         position: absolute;
-        width:100%;
-        z-index: -1;
-        .padding{
-          height: $nav-height;
-          border-bottom: .3rem solid #00AAE7;;
-          background: none;
-        }
-        .board{
-          transition: .3s all ease;
-          width:100%;
-          background: #003C82;
-          height: 18rem;
-          opacity: 0;
-        }
-      }
-
-      .item{
-        flex-direction: row;
-        font-size:1rem;
-        color: #003C82;
-        font-weight:500;
-        width: 7rem;
-        transition: .3s all ease;
-        dt{
-          height:$nav-height;
-          cursor: pointer;
-          a{
-            transition: .3s all ease;
-            position: relative;
-            &:before{
-              transition: .3s all ease;
-              opacity: 0;
-              content: '﹀';
-              bottom: -1.5rem;
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%)
-            }
+        right: 0;
+        top: 0;
+        height: $nav-height;
+        input{
+          outline: none;
+          border-radius: 1rem;
+          padding: .25rem 1rem;
+          border: 1px solid #2889da;
+          color: #2889da;
+          width: 10rem;
+          &:hover,&:focus{
+            box-shadow: 0 0 3px inset;
           }
         }
-        &:hover{
-          dt{
-            a{
-              color: #00AAE7;
-              &:before{
-                transition: none;
+        .searchBtn{
+          position: absolute;
+          height: 1.2rem;
+          width: 1.2rem;
+          right: .5rem;
+          top: .3rem;
+          border-radius: .1rem;
+          display: inline-block;
+          background-image: url(/public/images/search@2x.png);
+          background-size: contain;
+        }
+        .phoneNumber{
+          position: absolute;
+          width: 100%;
+          height: 1.5rem;
+          bottom: 120%;
+          font-size: 1.15rem;
+          font-weight: 900;
+          color: #00AAE7;
+          left:0;
+          background-size: contain;
+        }
+      }
+      .nav{
+        display: flex;
+        list-style: none;
+        align-self: center; //本身的对齐方式
+        align-items: flex-start; // 子元素的对齐方式
+        width: 100%;
+        position: relative;
+        min-height: $nav-height + 0.3;
+        //overflow: hidden;
+        transition: .3s all ease;
+        .wrap{
+          transition: .3s all ease;
+          display: flex;
+          height: $nav-height;
+          overflow-y: hidden;
+          &:hover{
+            height: $background-height + $nav-height;
+            .background{
+              .board{
                 opacity: 1;
               }
             }
           }
-        }
-        dd{
-          color: #fff;
-          padding: 1rem 0;
-          font-weight: 100;
-          cursor: pointer;
-          &>a{
-            background: none;
-            padding: .5rem 0;
+
+          .background{
+            position: absolute;
+            width:100%;
+            z-index: -1;
+            .padding{
+              height: $nav-height;
+              border-bottom: .3rem solid #00AAE7;;
+              background: none;
+            }
+            .board{
+              transition: .3s all ease;
+              width:100%;
+              background: #003C82;
+              height: $background-height;
+              opacity: 0;
+            }
+          }
+
+          .item{
+            flex-direction: row;
+            font-size:1rem;
+            color: #003C82;
+            font-weight:500;
+            width: 7rem;
             transition: .3s all ease;
+            dt{
+              height:$nav-height;
+              cursor: pointer;
+              margin-bottom: 2rem;
+              a{
+                transition: .3s all ease;
+                position: relative;
+                &:before{
+                  transition: .3s all ease;
+                  opacity: 0;
+                  content: '﹀';
+                  top: 120%;
+                  position: absolute;
+                  left: 50%;
+                  transform: translateX(-50%)
+                }
+              }
+            }
             &:hover{
-              transition: none;
-              border-bottom: 1px solid #00AAE7;
+              dt{
+                a{
+                  color: #00AAE7;
+                  &:before{
+                    transition: none;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+            dd{
+              color: #fff;
+              padding: 1rem 0;
+              font-weight: 100;
+              cursor: pointer;
+              &>a{
+                background: none;
+                padding: .5rem 0;
+                transition: .3s all ease;
+                &:hover{
+                  transition: none;
+                  border-bottom: 1px solid #00AAE7;
+                }
+              }
             }
           }
         }
-        &.searchBox{
-          position: relative;
-          flex-direction: row;
-          justify-content: flex-end;
-          flex-grow: 5;
-          display: flex;
-          input{
-            float: right;
-            outline: none;
-            border-radius: 1rem;
-            padding: .25rem 1rem;
-            border: 1px solid grey;
-            color: #2889da
-          }
-          .searchBtn{
-            align-self: center;
-            position: absolute;
-            height: 1rem;
-            right: 0.5rem;
-            border-radius: .1rem;
-            width: 1rem;
-            display: inline-block;
-            background-image: url(/public/images/search@2x.png);
-            background-size: contain;
-          }
-          .phoneNumber{
-            position: absolute;
-            width: 35%;
-            height: 1.5rem;
-            top:-2.5rem;
-            background: url(/public/images/phone1@2x.png) no-repeat;
-            background-size: contain;
-            padding: .25rem 1rem;
 
-          }
-        }
+
       }
     }
 
