@@ -2,7 +2,10 @@ body {
   font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;padding: 0;margin: 0;
 }
 ul,li{padding: 0;margin: 0;}
-
+dt,dd,dl{
+  padding: 0;
+  margin: 0;
+}
 html{
   font-size: 12px ;
 }

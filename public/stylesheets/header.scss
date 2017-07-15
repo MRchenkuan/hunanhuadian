@@ -1,7 +1,7 @@
 body{
   display: flex;
   flex-direction: column;
-
+  $nav-height: 3rem;
   .header{
     display: flex;
     flex-direction: column;
@@ -44,16 +44,88 @@ body{
       width: 80%;
       list-style: none;
       align-self: center; //本身的对齐方式
-      align-items: center; // 子元素的对齐方式
+      align-items: flex-start; // 子元素的对齐方式
       margin-top: 2.5rem;
+      position: relative;
+      height: $nav-height + 0.3;
+      overflow: hidden;
+      transition: .3s all ease;
+      &:hover{
+        height: 18 + $nav-height;
+        .background{
+          .board{
+            opacity: 1;
+            z-index: -1;
+          }
+        }
+      }
+      .background{
+        position: absolute;
+        width:100%;
+        z-index: -1;
+        .padding{
+          height: $nav-height;
+          border-bottom: .3rem solid #00AAE7;;
+          background: none;
+        }
+        .board{
+          transition: .3s all ease;
+          width:100%;
+          background: #003C82;
+          height: 18rem;
+          opacity: 0;
+        }
+      }
 
-      li{
+      .item{
         flex-direction: row;
-        &.item{
-          font-size:1rem;
-          color: #003C82;
-          font-weight:500;
-          width: 7rem;
+        font-size:1rem;
+        color: #003C82;
+        font-weight:500;
+        width: 7rem;
+        transition: .3s all ease;
+        dt{
+          height:$nav-height;
+          cursor: pointer;
+          a{
+            transition: .3s all ease;
+            position: relative;
+            &:before{
+              transition: .3s all ease;
+              opacity: 0;
+              content: '﹀';
+              bottom: -1.5rem;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%)
+            }
+          }
+        }
+        &:hover{
+          dt{
+            a{
+              color: #00AAE7;
+              &:before{
+                transition: none;
+                opacity: 1;
+              }
+            }
+          }
+        }
+        dd{
+          color: #fff;
+          padding: 1rem 0;
+          font-weight: 100;
+          cursor: pointer;
+          &>a{
+            background: none;
+            padding: .5rem 0;
+            transition: .3s all ease;
+            &:hover{
+              transition: none;
+              border-bottom: 1px solid #00AAE7;
+            }
+          }
         }
         &.searchBox{
           position: relative;
@@ -66,7 +138,6 @@ body{
             outline: none;
             border-radius: 1rem;
             padding: .25rem 1rem;
-            width: 35%;
             border: 1px solid grey;
             color: #2889da
           }
@@ -110,7 +181,7 @@ body{
       color:#fff;
       padding: 0 10%;
       height:auto;
-      transition: 1s ease all;
+      transition: .3s ease all;
       .column{
         list-style: none;
         width: 7rem;

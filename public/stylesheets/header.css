@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   flex-direction: column; }
@@ -32,30 +33,83 @@ body {
       width: 80%;
       list-style: none;
       align-self: center;
-      align-items: center;
-      margin-top: 2.5rem; }
-      body .header > .nav li {
-        flex-direction: row; }
-        body .header > .nav li.item {
-          font-size: 1rem;
-          color: #003C82;
-          font-weight: 500;
-          width: 7rem; }
-        body .header > .nav li.searchBox {
+      align-items: flex-start;
+      margin-top: 2.5rem;
+      position: relative;
+      height: 3.3rem;
+      overflow: hidden;
+      transition: .3s all ease; }
+      body .header > .nav:hover {
+        height: 21rem; }
+        body .header > .nav:hover .background .board {
+          opacity: 1;
+          z-index: -1; }
+      body .header > .nav .background {
+        position: absolute;
+        width: 100%;
+        z-index: -1; }
+        body .header > .nav .background .padding {
+          height: 3rem;
+          border-bottom: .3rem solid #00AAE7;
+          background: none; }
+        body .header > .nav .background .board {
+          transition: .3s all ease;
+          width: 100%;
+          background: #003C82;
+          height: 18rem;
+          opacity: 0; }
+      body .header > .nav .item {
+        flex-direction: row;
+        font-size: 1rem;
+        color: #003C82;
+        font-weight: 500;
+        width: 7rem;
+        transition: .3s all ease; }
+        body .header > .nav .item dt {
+          height: 3rem;
+          cursor: pointer; }
+          body .header > .nav .item dt a {
+            transition: .3s all ease;
+            position: relative; }
+            body .header > .nav .item dt a:before {
+              transition: .3s all ease;
+              opacity: 0;
+              content: '﹀';
+              bottom: -1.5rem;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%); }
+        body .header > .nav .item:hover dt a {
+          color: #00AAE7; }
+          body .header > .nav .item:hover dt a:before {
+            transition: none;
+            opacity: 1; }
+        body .header > .nav .item dd {
+          color: #fff;
+          padding: 1rem 0;
+          font-weight: 100;
+          cursor: pointer; }
+          body .header > .nav .item dd > a {
+            background: none;
+            padding: .5rem 0;
+            transition: .3s all ease; }
+            body .header > .nav .item dd > a:hover {
+              transition: none;
+              border-bottom: 1px solid #00AAE7; }
+        body .header > .nav .item.searchBox {
           position: relative;
           flex-direction: row;
           justify-content: flex-end;
           flex-grow: 5;
           display: flex; }
-          body .header > .nav li.searchBox input {
+          body .header > .nav .item.searchBox input {
             float: right;
             outline: none;
             border-radius: 1rem;
             padding: .25rem 1rem;
-            width: 35%;
             border: 1px solid grey;
             color: #2889da; }
-          body .header > .nav li.searchBox .searchBtn {
+          body .header > .nav .item.searchBox .searchBtn {
             align-self: center;
             position: absolute;
             height: 1rem;
@@ -65,7 +119,7 @@ body {
             display: inline-block;
             background-image: url(/public/images/search@2x.png);
             background-size: contain; }
-          body .header > .nav li.searchBox .phoneNumber {
+          body .header > .nav .item.searchBox .phoneNumber {
             position: absolute;
             width: 35%;
             height: 1.5rem;
@@ -87,7 +141,7 @@ body {
       color: #fff;
       padding: 0 10%;
       height: auto;
-      transition: 1s ease all; }
+      transition: .3s ease all; }
       body .header > .navDetail .column {
         list-style: none;
         width: 7rem; }
