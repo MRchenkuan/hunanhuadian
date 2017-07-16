@@ -1,11 +1,11 @@
 extends layout
 
 append head
-  script(src='/public/javascripts/index.js')
   link(rel='stylesheet', href='/public/stylesheets/header.css')
   link(rel='stylesheet', href='/public/stylesheets/footer.css')
   link(rel='stylesheet', href='/public/stylesheets/index.css')
-
+append bottom
+  script(src='/public/javascripts/index.js')
 block header
   include header
 block content

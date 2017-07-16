@@ -14,7 +14,7 @@ body{
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      width: 80%;
+      width: 80vw;
       margin: auto;
       overflow: hidden;
       font-size: 1.2rem;
@@ -40,7 +40,7 @@ body{
 
     // 导航菜单部分
     .nav-frame{
-      width: 80%;
+      width: 80vw;
       margin: 2.5rem auto 0;
       position: relative;
       .search-widget{
@@ -177,43 +177,6 @@ body{
             }
           }
         }
-
-
-      }
-    }
-
-    // 导航菜单详细列表部分
-    &>.navDetail{
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      list-style: none;
-      align-self: center; //本身的对齐方式
-      align-items: flex-start; // 子元素的对齐方式
-      margin-top: 1rem;
-      border-top:.3rem solid #00AAE7;
-      border-bottom:.3rem solid #00AAE7;
-      background-color: #003C82;
-      color:#fff;
-      padding: 0 10%;
-      height:auto;
-      transition: .3s ease all;
-      .column{
-        list-style: none;
-        width: 7rem;
-        .item{
-          padding: 1rem 0;
-          font-weight: 100;
-          &>a{
-            padding: .5rem 0;
-            &:hover{
-              border-bottom: 1px solid #00AAE7;
-            }
-          }
-        }
-      }
-      .padding{
-          flex-grow: 5;
       }
     }
   }

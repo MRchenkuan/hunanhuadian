@@ -11,7 +11,7 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      width: 80%;
+      width: 80vw;
       margin: auto;
       overflow: hidden;
       font-size: 1.2rem;
@@ -28,7 +28,7 @@ body {
         body .header > .logo .logo.logo, body .header > .logo .branches.logo {
           height: 3.5rem; }
     body .header .nav-frame {
-      width: 80%;
+      width: 80vw;
       margin: 2.5rem auto 0;
       position: relative; }
       body .header .nav-frame .search-widget {
@@ -136,32 +136,5 @@ body {
                 body .header .nav-frame .nav .wrap .item dd > a:hover {
                   transition: none;
                   border-bottom: 1px solid #00AAE7; }
-    body .header > .navDetail {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      list-style: none;
-      align-self: center;
-      align-items: flex-start;
-      margin-top: 1rem;
-      border-top: .3rem solid #00AAE7;
-      border-bottom: .3rem solid #00AAE7;
-      background-color: #003C82;
-      color: #fff;
-      padding: 0 10%;
-      height: auto;
-      transition: .3s ease all; }
-      body .header > .navDetail .column {
-        list-style: none;
-        width: 7rem; }
-        body .header > .navDetail .column .item {
-          padding: 1rem 0;
-          font-weight: 100; }
-          body .header > .navDetail .column .item > a {
-            padding: .5rem 0; }
-            body .header > .navDetail .column .item > a:hover {
-              border-bottom: 1px solid #00AAE7; }
-      body .header > .navDetail .padding {
-        flex-grow: 5; }
 
 /*# sourceMappingURL=header.css.map */

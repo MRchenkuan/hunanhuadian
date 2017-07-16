@@ -3,9 +3,12 @@
   height: 30vw;
   border: 1px solid grey;
   margin: 1.5rem auto 2rem;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .carousel_frame .pice {
+    transition: 1.2s ease all;
     width: 100%;
+    position: absolute;
     height: 100%;
     background-size: cover;
     background-position: center; }
@@ -27,23 +30,26 @@
   margin: 2rem auto;
   width: 80vw;
   overflow: hidden; }
-  .news_frame .pice {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative; }
-    .news_frame .pice .bottom-text {
-      height: 3rem;
-      background: rgba(0, 170, 231, 0.6);
-      color: #fff;
-      line-height: 3rem;
-      text-align: center;
-      bottom: 0;
-      position: absolute;
-      width: 100%; }
   .news_frame .news_carousel {
-    width: 55%; }
+    width: 55%;
+    position: relative;
+    overflow: hidden; }
+    .news_frame .news_carousel .pice {
+      transition: .5s ease all;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center; }
+      .news_frame .news_carousel .pice .bottom-text {
+        height: 3rem;
+        background: rgba(0, 170, 231, 0.6);
+        color: #fff;
+        line-height: 3rem;
+        text-align: center;
+        bottom: 0;
+        position: absolute;
+        width: 100%; }
   .news_frame .news_list {
     width: 40%;
     display: flex;
