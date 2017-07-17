@@ -1,6 +1,4 @@
 .footer{
-  display: flex;
-  justify-content: space-between;
   width: 80%;
   align-self: center; //本身的对齐方式
   margin-top: 1rem;
@@ -13,13 +11,12 @@
   &>.intro{
     line-height: 2.5;
     font-weight: 300;
-    width: 66%;
-    &>.intro{
-      column-count: 2;
-
-    }
+    width: 33%;
+    float: left;
   }
   &>.contact{
+    float: left;
+    margin-left: 5%;
     width: 33%;
     line-height: 2.5;
     .icon{

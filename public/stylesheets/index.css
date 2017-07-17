@@ -1,7 +1,6 @@
 .carousel_frame {
   width: 80vw;
   height: 30vw;
-  border: 1px solid grey;
   margin: 1.5rem auto 2rem;
   overflow: hidden;
   position: relative; }
@@ -107,9 +106,9 @@
       border: 1px solid #0AC7D6;
       box-shadow: 0 0 10px 0 #93C2E7; }
       .intro_frame .card:hover .plus {
-        background: #93C2E7;
+        background: #00AAE7;
         color: #FFFFFF;
-        border: 1px solid #93C2E7; }
+        border: 1px solid #00AAE7; }
     .intro_frame .card .head {
       height: 14em;
       width: 100%;

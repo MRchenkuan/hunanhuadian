@@ -1,6 +1,4 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
   width: 80%;
   align-self: center;
   margin-top: 1rem;
@@ -12,10 +10,11 @@
   .footer > .intro {
     line-height: 2.5;
     font-weight: 300;
-    width: 66%; }
-    .footer > .intro > .intro {
-      column-count: 2; }
+    width: 33%;
+    float: left; }
   .footer > .contact {
+    float: left;
+    margin-left: 5%;
     width: 33%;
     line-height: 2.5; }
     .footer > .contact .icon {
