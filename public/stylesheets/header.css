@@ -130,6 +130,8 @@ body {
               font-weight: 100;
               cursor: pointer; }
               body .header .nav-frame .nav .wrap .item dd > a {
+                color: #fff;
+                text-decoration: none;
                 background: none;
                 padding: .5rem 0;
                 transition: .3s all ease; }

@@ -1,8 +1,8 @@
 body{
   display: flex;
   flex-direction: column;
-  $nav-height: 3rem;
-  $background-height: 21rem;
+  $nav-height: 3rem; // 菜单首行高度
+  $background-height: 21rem; // 背景总高度
   .header{
     display: flex;
     flex-direction: column;
@@ -166,6 +166,8 @@ body{
               font-weight: 100;
               cursor: pointer;
               &>a{
+                color: #fff;
+                text-decoration: none;
                 background: none;
                 padding: .5rem 0;
                 transition: .3s all ease;
