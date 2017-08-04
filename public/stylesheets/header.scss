@@ -138,6 +138,8 @@ body{
               a{
                 transition: .3s all ease;
                 position: relative;
+                color: #003C82;
+                text-decoration: none;
                 &:before{
                   transition: .3s all ease;
                   opacity: 0;

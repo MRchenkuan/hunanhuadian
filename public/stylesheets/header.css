@@ -110,7 +110,9 @@ body {
               margin-bottom: 2rem; }
               body .header .nav-frame .nav .wrap .item dt a {
                 transition: .3s all ease;
-                position: relative; }
+                position: relative;
+                color: #003C82;
+                text-decoration: none; }
                 body .header .nav-frame .nav .wrap .item dt a:before {
                   transition: .3s all ease;
                   opacity: 0;
