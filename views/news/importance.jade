@@ -5,83 +5,17 @@ append head
   link(rel='stylesheet', href='/public/stylesheets/footer.css')
   link(rel='stylesheet', href='/public/stylesheets/common.css')
 append bottom
-  //script(src='/public/javascripts/index.js')
+  script(src='/public/javascripts/modal.js')
 block header
   include ../header
 block content
   .content_block.flex.col-4
-    div.news-box
-      img(src="/public/images/photos/img1.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img2.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img3.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img4.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img5.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img6.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img7.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img8.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img9.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img10.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img11.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-    div.news-box
-      img(src="/public/images/photos/img12.png")
-      .info-box
-        p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-        span.left 2017/07/21
-        span.right MORE
-
+    each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+      div.news-box(onclick="showNews(#{i})")
+        img(src="/public/images/photos/img#{i}.png")
+        .info-box
+          p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
+          span.left 2017/07/21
+          span.right MORE
 block footer
   include ../footer
