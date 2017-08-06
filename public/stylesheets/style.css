@@ -1,5 +1,6 @@
 body {
-  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;padding: 0;margin: 0;
+  font: 1rem "SimSun","宋体","Arial Narrow",Helvetica, Arial, sans-serif;
+  padding: 0;margin: 0;
 }
 ul,li{padding: 0;margin: 0;}
 dt,dd,dl{

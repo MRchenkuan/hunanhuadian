@@ -102,6 +102,7 @@
     document.body.appendChild(modal);
 
     function showModal(content) {
+        contentBox.innerHTML = "";
         shader.style.display = "block";
         modal.style.display = "block";
         shader.style.opacity = .4;

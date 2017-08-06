@@ -19,7 +19,8 @@ body {
       body .header > .logo .logo, body .header > .logo .branches {
         align-self: center;
         float: left;
-        list-style: none; }
+        list-style: none;
+        font-weight: bold; }
         body .header > .logo .logo.branches, body .header > .logo .branches.branches {
           margin-left: 1rem; }
           body .header > .logo .logo.branches a, body .header > .logo .branches.branches a {
