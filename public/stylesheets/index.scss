@@ -63,7 +63,7 @@
     flex-direction: column;
     .header{
       display: block;
-      overflow: hidden;
+      //overflow: hidden;
       .h3,.h5{
         display: inline-block;
       }
@@ -93,6 +93,9 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        a{
+          font-size: 1.15rem;
+        }
       }
       .item:nth-child(1){
         border-top: 2px solid #00AAE7;
@@ -129,12 +132,16 @@
         color:#FFFFFF;
         border:1px solid #00AAE7;
       }
+      .head{
+        transform: scale(.95);
+      }
     }
     .head{
       height: 14em;
       width: 100%;
       background-size: cover;
       background-position: center;
+      transition: all .4s ease;
     }
     .title{
       padding: 1.5rem 1rem;

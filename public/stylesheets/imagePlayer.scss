@@ -23,9 +23,9 @@
     font-family: sans-serif;
     cursor: pointer;
     &.close{
-      bottom:5rem;
-      left: 50%;
-      transform: translate(-50%,50%);
+      right:1rem;
+      top: 1rem;
+      //transform: translate(-50%,50%);
     }
     &.left{
       left: 3rem;
@@ -43,7 +43,7 @@
     border:none;
     overflow: auto;
     margin:10rem 5rem;
-    max-height: 30vh;
+    max-height: 60vh;
   }
 
   .modal-text{

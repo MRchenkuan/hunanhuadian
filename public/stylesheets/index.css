@@ -54,8 +54,7 @@
     display: flex;
     flex-direction: column; }
     .news_frame .news_list .header {
-      display: block;
-      overflow: hidden; }
+      display: block; }
       .news_frame .news_list .header .h3, .news_frame .news_list .header .h5 {
         display: inline-block; }
       .news_frame .news_list .header .h3 {
@@ -81,6 +80,8 @@
         display: flex;
         justify-content: center;
         flex-direction: column; }
+        .news_frame .news_list .list .item a {
+          font-size: 1.15rem; }
       .news_frame .news_list .list .item:nth-child(1) {
         border-top: 2px solid #00AAE7; }
       .news_frame .news_list .list .item:hover {
@@ -109,11 +110,14 @@
         background: #00AAE7;
         color: #FFFFFF;
         border: 1px solid #00AAE7; }
+      .intro_frame .card:hover .head {
+        transform: scale(0.95); }
     .intro_frame .card .head {
       height: 14em;
       width: 100%;
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      transition: all .4s ease; }
     .intro_frame .card .title {
       padding: 1.5rem 1rem;
       color: #003C82;

@@ -18,15 +18,23 @@
     float: left;
     margin-left: 5%;
     width: 33%;
-    line-height: 2.5;
+    h3{
+      line-height: 2.5;
+    }
     .icon{
       color: #47a4de;
+      font-size: 2rem;
       margin-right: 2rem;
     }
     .phone>span{
       color: white;
       font-weight: 900;
-      font-size: 14px;
+      font-size: 2.5rem;
     }
   }
+}
+.backnumb{
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 2.5;
 }

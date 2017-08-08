@@ -3,11 +3,11 @@ body{
   flex-direction: column;
   $nav-height: 3rem; // 菜单首行高度
   $background-height: 21rem; // 背景总高度
-  .header{
+  >.header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
+    padding: 5rem 0 0;
 
     // 顶部logo部分
     &>.logo{
@@ -30,6 +30,9 @@ body{
           a{
             text-decoration: none;
             color: #003C82;
+          }
+          li{
+            line-height: 1.5;
           }
         }
         &.logo{
@@ -75,10 +78,10 @@ body{
           width: 100%;
           height: 1.5rem;
           bottom: 120%;
-          font-size: 1.15rem;
-          font-weight: 900;
+          font-size: 1.45rem;
+          //font-weight: 900;
           color: #00AAE7;
-          left:0;
+          left: 0;
           background-size: contain;
         }
       }

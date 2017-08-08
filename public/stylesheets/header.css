@@ -2,12 +2,12 @@
 body {
   display: flex;
   flex-direction: column; }
-  body .header {
+  body > .header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0; }
-    body .header > .logo {
+    padding: 5rem 0 0; }
+    body > .header > .logo {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -16,37 +16,39 @@ body {
       overflow: hidden;
       font-size: 1.2rem;
       font-weight: 500; }
-      body .header > .logo .logo, body .header > .logo .branches {
+      body > .header > .logo .logo, body > .header > .logo .branches {
         align-self: center;
         float: left;
         list-style: none;
         font-weight: bold; }
-        body .header > .logo .logo.branches, body .header > .logo .branches.branches {
+        body > .header > .logo .logo.branches, body > .header > .logo .branches.branches {
           margin-left: 1rem; }
-          body .header > .logo .logo.branches a, body .header > .logo .branches.branches a {
+          body > .header > .logo .logo.branches a, body > .header > .logo .branches.branches a {
             text-decoration: none;
             color: #003C82; }
-        body .header > .logo .logo.logo, body .header > .logo .branches.logo {
+          body > .header > .logo .logo.branches li, body > .header > .logo .branches.branches li {
+            line-height: 1.5; }
+        body > .header > .logo .logo.logo, body > .header > .logo .branches.logo {
           height: 3.5rem; }
-    body .header .nav-frame {
+    body > .header .nav-frame {
       width: 80vw;
       margin: 2.5rem auto 0;
       position: relative; }
-      body .header .nav-frame .search-widget {
+      body > .header .nav-frame .search-widget {
         position: absolute;
         right: 0;
         top: 0;
         height: 3rem; }
-        body .header .nav-frame .search-widget input {
+        body > .header .nav-frame .search-widget input {
           outline: none;
           border-radius: 1rem;
           padding: .25rem 1rem;
           border: 1px solid #2889da;
           color: #2889da;
           width: 10rem; }
-          body .header .nav-frame .search-widget input:hover, body .header .nav-frame .search-widget input:focus {
+          body > .header .nav-frame .search-widget input:hover, body > .header .nav-frame .search-widget input:focus {
             box-shadow: 0 0 3px inset; }
-        body .header .nav-frame .search-widget .searchBtn {
+        body > .header .nav-frame .search-widget .searchBtn {
           position: absolute;
           height: 1.2rem;
           width: 1.2rem;
@@ -56,17 +58,16 @@ body {
           display: inline-block;
           background-image: url(/public/images/search@2x.png);
           background-size: contain; }
-        body .header .nav-frame .search-widget .phoneNumber {
+        body > .header .nav-frame .search-widget .phoneNumber {
           position: absolute;
           width: 100%;
           height: 1.5rem;
           bottom: 120%;
-          font-size: 1.15rem;
-          font-weight: 900;
+          font-size: 1.45rem;
           color: #00AAE7;
           left: 0;
           background-size: contain; }
-      body .header .nav-frame .nav {
+      body > .header .nav-frame .nav {
         display: flex;
         list-style: none;
         align-self: center;
@@ -75,46 +76,46 @@ body {
         position: relative;
         min-height: 3.3rem;
         transition: .3s all ease; }
-        body .header .nav-frame .nav .wrap {
+        body > .header .nav-frame .nav .wrap {
           transition: .3s all ease;
           display: flex;
           height: 3rem;
           overflow-y: hidden; }
-          body .header .nav-frame .nav .wrap:hover {
+          body > .header .nav-frame .nav .wrap:hover {
             height: 24rem; }
-            body .header .nav-frame .nav .wrap:hover .background .board {
+            body > .header .nav-frame .nav .wrap:hover .background .board {
               opacity: 1; }
-          body .header .nav-frame .nav .wrap .background {
+          body > .header .nav-frame .nav .wrap .background {
             position: absolute;
             width: 100%;
             z-index: -1; }
-            body .header .nav-frame .nav .wrap .background .padding {
+            body > .header .nav-frame .nav .wrap .background .padding {
               height: 3rem;
               border-bottom: .3rem solid #00AAE7;
               background: none; }
-            body .header .nav-frame .nav .wrap .background .board {
+            body > .header .nav-frame .nav .wrap .background .board {
               transition: .3s all ease;
               width: 100%;
               background: #003C82;
               height: 21rem;
               opacity: 0; }
-          body .header .nav-frame .nav .wrap .item {
+          body > .header .nav-frame .nav .wrap .item {
             flex-direction: row;
             font-size: 1rem;
             color: #003C82;
             font-weight: 500;
             width: 7rem;
             transition: .3s all ease; }
-            body .header .nav-frame .nav .wrap .item dt {
+            body > .header .nav-frame .nav .wrap .item dt {
               height: 3rem;
               cursor: pointer;
               margin-bottom: 2rem; }
-              body .header .nav-frame .nav .wrap .item dt a {
+              body > .header .nav-frame .nav .wrap .item dt a {
                 transition: .3s all ease;
                 position: relative;
                 color: #003C82;
                 text-decoration: none; }
-                body .header .nav-frame .nav .wrap .item dt a:before {
+                body > .header .nav-frame .nav .wrap .item dt a:before {
                   transition: .3s all ease;
                   opacity: 0;
                   content: '﹀';
@@ -122,23 +123,23 @@ body {
                   position: absolute;
                   left: 50%;
                   transform: translateX(-50%); }
-            body .header .nav-frame .nav .wrap .item:hover dt a {
+            body > .header .nav-frame .nav .wrap .item:hover dt a {
               color: #00AAE7; }
-              body .header .nav-frame .nav .wrap .item:hover dt a:before {
+              body > .header .nav-frame .nav .wrap .item:hover dt a:before {
                 transition: none;
                 opacity: 1; }
-            body .header .nav-frame .nav .wrap .item dd {
+            body > .header .nav-frame .nav .wrap .item dd {
               color: #fff;
               padding: 1rem 0;
               font-weight: 100;
               cursor: pointer; }
-              body .header .nav-frame .nav .wrap .item dd > a {
+              body > .header .nav-frame .nav .wrap .item dd > a {
                 color: #fff;
                 text-decoration: none;
                 background: none;
                 padding: .5rem 0;
                 transition: .3s all ease; }
-                body .header .nav-frame .nav .wrap .item dd > a:hover {
+                body > .header .nav-frame .nav .wrap .item dd > a:hover {
                   transition: none;
                   border-bottom: 1px solid #00AAE7; }
 

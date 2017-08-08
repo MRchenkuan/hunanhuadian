@@ -1,5 +1,10 @@
 body {
-  font: 1rem "SimSun","宋体","Arial Narrow",Helvetica, Arial, sans-serif;
+  font-family:'PingFang SC Light','PingFang TC Light','PingFang-SC-Light','PingFang-TC-Light','PingFang SC','PingFang TC',
+  'Hiragino Sans GB',
+  'Lantinghei TC Extralight','Lantinghei SC Extralight',FZLTXHB--B51-0,FZLTZHK--GBK1-0,
+  'Heiti SC Light',STHeitiSC-Light,'Heiti SC','Heiti TC Light',STHeitiTC-Light,'Heiti TC',
+  'Microsoft Yahei','Microsoft Jhenghei',
+  'Noto Sans CJK KR','Noto Sans CJK JP','Noto Sans CJK SC','Noto Sans CJK TC','Source Han Sans K','Source Han Sans KR','Source Han Sans JP','Source Han Sans CN','Source Han Sans HK','Source Han Sans TW','Source Han Sans TWHK','Droid Sans Fallback',Helvetica,Arial,sans-serif;
   padding: 0;margin: 0;
 }
 ul,li{padding: 0;margin: 0;}
