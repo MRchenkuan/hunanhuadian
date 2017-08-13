@@ -4,18 +4,19 @@ append head
   link(rel='stylesheet', href='/public/stylesheets/header.css')
   link(rel='stylesheet', href='/public/stylesheets/footer.css')
   link(rel='stylesheet', href='/public/stylesheets/common.css')
+  link(rel='stylesheet', href='/public/stylesheets/modal.css')
 append bottom
   script(src='/public/javascripts/modal.js')
 block header
   include ../header
 block content
-  .content_block.flex.col-4
-    each i in ['01','02','03','04','05','06','07','08','09','10','11','12']
-      div.news-box(onclick="showNews('/public/images/news/new2_#{i}.jpg')")
-        img(src="/public/images/news/new2_#{i}.jpg")
+  .content_block.flex.col-4.flex-start
+    each news in newslist
+      div.news-box(onclick="showNews('#{news.banner}')")
+        .img-box(style="background-image:url(#{news.banner})")
         .info-box
-          p 湖南华电郴州发电有限公司湖南华电郴州发电有限公司
-          span.left 2017/07/21
+          p #{news.title}
+          span.left #{news.date}
           span.right MORE
 block footer
   include ../footer

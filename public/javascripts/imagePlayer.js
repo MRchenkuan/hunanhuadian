@@ -76,9 +76,6 @@
     nextTag.addEventListener('click', methods.turnNext)
     prevTag.addEventListener('click', methods.turnPrev)
 
-    closeTag.innerHTML = "×";
-    nextTag.innerHTML = ">";
-    prevTag.innerHTML = "<";
     shader.style.zIndex = getMaxZindex();
     modal.style.zIndex = getMaxZindex()+1;
 

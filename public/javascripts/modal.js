@@ -37,7 +37,6 @@
 
     var closeTag = document.createElement("span");
     closeTag.classList.add("modal-close-tag");
-    closeTag.innerHTML = "X";
     modal.appendChild(closeTag);
 
     var contentBox = document.createElement("div");
@@ -50,49 +49,12 @@
     closeTag.addEventListener('click',closeModal);
     shader.addEventListener('click',closeModal);
 
-    contentBox.style.border = "none";
-    contentBox.style.overflow = "auto";
-    contentBox.style.position = "absolute";
-    contentBox.style.top = "5rem";
-    contentBox.style.bottom = "0";
-    contentBox.style.left = "0";
-    contentBox.style.right = "0";
-    contentBox.style.padding = "0 10rem";
-
-    closeTag.style.position="absolute";
-    closeTag.style.top = "1rem";
-    closeTag.style.right = "1rem";
-    closeTag.style.borderRadius = "5rem";
-    closeTag.style.border = "2px solid #9B9B9B";
-    closeTag.style.color = "#9B9B9B";
-    closeTag.style.textAlign = "center";
-    closeTag.style.width = "3rem";
-    closeTag.style.height = "3rem";
-    closeTag.style.display = "flex";
-    closeTag.style.justifyContent = "center";
-    closeTag.style.alignItems = "center";
-    closeTag.style.fontSize = "2rem";
-    closeTag.style.fontFamily = "sans-serif";
-    closeTag.style.cursor = "pointer";
 
     shader.style.zIndex = getMaxZindex();
     shader.style.transition = animateDuration + "ms opacity ease";
-    shader.style.position = "fixed";
-    shader.style.width = "100%";
-    shader.style.height = "100%";
-    shader.style.background = "grey";
-    shader.style.display = "none";
 
     modal.style.zIndex = getMaxZindex()+1;
     modal.style.transition = animateDuration + "ms opacity ease";
-    modal.style.background = "#fff";
-    modal.style.width = "80%";
-    modal.style.height = "80%";
-    modal.style.top = "10%";
-    modal.style.left = "10%";
-    modal.style.borderRadius = ".5rem";
-    modal.style.position = "fixed";
-    modal.style.display = "none"
 
 
     document.body.appendChild(shader);

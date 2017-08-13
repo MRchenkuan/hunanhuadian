@@ -21,6 +21,24 @@
       .carousel_frame .pice .text .subtitle {
         font-size: 2rem;
         color: #fff; }
+  .carousel_frame .controller {
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-60%) scaleX(0.5);
+    font-size: 5rem;
+    font-weight: 300;
+    transform-origin: center;
+    transition: .3s ease all; }
+    .carousel_frame .controller:hover {
+      transform: translateY(-60%) scale(0.75, 1.5); }
+    .carousel_frame .controller:active {
+      transform: translateY(-60%) scaleX(0.5); }
+    .carousel_frame .controller.left {
+      left: 1rem; }
+    .carousel_frame .controller.right {
+      right: 1rem; }
 
 .news_frame {
   display: flex;
@@ -81,7 +99,10 @@
         justify-content: center;
         flex-direction: column; }
         .news_frame .news_list .list .item a {
-          font-size: 1.15rem; }
+          font-size: 1.15rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
       .news_frame .news_list .list .item:nth-child(1) {
         border-top: 2px solid #00AAE7; }
       .news_frame .news_list .list .item:hover {

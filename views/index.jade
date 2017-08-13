@@ -11,85 +11,38 @@ block header
   include header
 block content
   div.carousel_frame
-    div.pice(style="background-image:url(/public/images/banner1@2x.jpeg)")
-      div.text
-        .title 风起云涌
-        .subtitle 湖南郴州风力发电有限公司
-    div.pice(style="background-image:url(/public/images/banner2@2x.jpeg)")
-      div.text
-        .title 风起云涌
-        .subtitle 湖南郴州风力发电有限公司
-    div.pice(style="background-image:url(/public/images/banner3@2x.jpeg)")
-      div.text
-        .title 风起云涌
-        .subtitle 湖南郴州风力发电有限公司
-    div.pice(style="background-image:url(/public/images/banner4@2x.jpeg)")
-      div.text
-        .title 风起云涌
-        .subtitle 湖南郴州风力发电有限公司
-    div.pice(style="background-image:url(/public/images/banner5@2x.jpeg)")
-      div.text
-        .title 风起云涌
-        .subtitle 湖南郴州风力发电有限公司
+    each i in [1,2,3,4,5]
+      div.pice(style="background-image:url(/public/images/home/banner#{i}@1x.jpg)")
+        div.text
+          .title 风起云涌
+          .subtitle 湖南郴州风力发电有限公司
+    .controller.left <
+    .controller.right >
   div.news_frame
     div.news_carousel
-      div.pice(style="background-image:url(/public/images/news1@2x.jpeg)")
-        div.bottom-text 湖南华电郴州风力发电有限公司于2009年6月11日注册
-      div.pice(style="background-image:url(/public/images/news2@2x.jpeg)")
-        div.bottom-text 湖南省首家建设投产的风力发电公司
-      div.pice(style="background-image:url(/public/images/news3@2x.jpeg)")
-        div.bottom-text 015年8月5日已取得湖南省永兴县发改委核准批复
-      div.pice(style="background-image:url(/public/images/news4@2x.jpeg)")
-        div.bottom-text 国家的产业政策和可再生能源发展规划为指导
-      div.pice(style="background-image:url(/public/images/news5@2x.jpeg)")
-        div.bottom-text 湖南省首家建设投产的风力发电公司
+      each v in newsList
+        div.pice(style="background-image:url(#{v.banner})")
+          div.bottom-text #{v.title}
     div.news_list
       div.header
         span.h3 公司要闻
         span.h5
           a(href='importance') MORE
       ul.list
-        li.item(data-index=1)
-          a(href='importance') 湖南华电郴州风力发电有限公司于2009年6月11日注册
-        li.item(data-index=2)
-          a(href='importance') 湖南省首家建设投产的风力发电公司
-        li.item(data-index=3)
-          a(href='importance') 2015年8月5日已取得湖南省永兴县发改委核准批复
-        li.item(data-index=4)
-          a(href='importance') 国家的产业政策和可再生能源发展规划为指导
-        li.item(data-index=5)
-          a(href='importance') 湖南省首家建设投产的风力发电公司
+        each v,k in newsList
+          li.item(data-index="#{k+1}")
+            a(href='importance') #{v.title}
   div.intro_frame
-    div.card
-      a(href="speech")
-        div.head(style='background-image:url(/public/images/img1@2x.jpg)')
-        div.title 总经理致辞
-        div.intro 公司仰天湖36.3MW风电项目于2008年8月通过湖南省发展和改革委员会核准批复
-        span.plus
-    div.card
-      a(href="about")
-        div.head(style='background-image:url(/public/images/img2@2x.jpg)')
-        div.title 公司简介
-        div.intro 公司仰天湖36.3MW风电项目于2008年8月通过湖南省发展和改革委员会核准批复
-        span.plus
-    div.card
-      a(href="leadership")
-        div.head(style='background-image:url(/public/images/img3@2x.jpg)')
-        div.title 领导班子
-        div.intro 公司仰天湖36.3MW风电项目于2008年8月通过湖南省发展和改革委员会核准批复
-        span.plus
-    div.card
-      a(href="distribution")
-        div.head(style='background-image:url(/public/images/img4@2x.jpg)')
-        div.title 业务及分布
-        div.intro 公司仰天湖36.3MW风电项目于2008年8月通过湖南省发展和改革委员会核准批复
-        span.plus
+    each card in newsCards
+      div.card
+        a(href="#{card.url}")
+          div.head(style='background-image:url(#{card.banner})')
+          div.title #{card.title}
+          div.intro #{card.text}
+          span.plus
   div.pictures_frame
-    a.pic(href="culture" style='background-image:url(/public/images/img1@2x.jpeg)')
-      span.title 文化体系
-    a.pic(href="rules" style='background-image:url(/public/images/img2@2x.jpeg)')
-      span.title 员工守则
-    a.pic(href="photos" style='background-image:url(/public/images/img3@2x.jpeg)')
-      span.title 电厂美景
+    each card in cultureCards
+      a.pic(href="#{card.url}" style='background-image:url(#{card.banner})')
+        span.title #{card.title}
 block footer
   include footer

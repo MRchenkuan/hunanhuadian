@@ -25,6 +25,29 @@
       }
     }
   }
+  .controller{
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-60%) scaleX(.5);
+    font-size: 5rem;
+    font-weight: 300;
+    transform-origin: center;
+    transition: .3s ease all;
+    &:hover{
+      transform: translateY(-60%) scale(.75,1.5);
+    }
+    &:active{
+      transform: translateY(-60%) scaleX(.5);
+    }
+    &.left{
+     left:1rem
+    }
+    &.right{
+      right: 1rem;
+    }
+  }
 }
 
 .news_frame{
@@ -95,6 +118,9 @@
         flex-direction: column;
         a{
           font-size: 1.15rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
       .item:nth-child(1){

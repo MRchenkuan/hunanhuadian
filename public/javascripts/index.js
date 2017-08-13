@@ -5,7 +5,9 @@ function carousel(selector,option) {
 
     var frame = document.querySelector(selector)
     var frameWidth = frame.clientWidth
-    var pices = frame.querySelectorAll(selector+'>div')
+    var pices = frame.querySelectorAll(selector+'>div.pice')
+    var prevBtn = frame.querySelector('.controller.left')
+    var nextBtn = frame.querySelector('.controller.right')
     var len = pices.length
     var index = 0;
     var isPuase = false;
@@ -23,21 +25,23 @@ function carousel(selector,option) {
         });
     },option.duration)
 
-    return {
+    var tureTo = function (i) {
+        isPuase = true
+        index = i;
+        Array.prototype.some.call(pices, function (it, id) {
+            it.style.transform = 'translateX(-'+index * frameWidth+'px)'
+        });
+    };
+    var methods = {
         next: function () {
-            if(index >= len) return index = 0
-            index ++
+            if(index >= len-1) index = -1;
+            index ++;
+            tureTo(index)
         },
         prev: function () {
-            if(index < 0) return index = len-1;
-            index--
-        },
-        tureTo: function (i) {
-            isPuase = true
-            index = i;
-            Array.prototype.some.call(pices, function (it, id) {
-                it.style.transform = 'translateX(-'+index * frameWidth+'px)'
-            });
+            if(index <= 0) index = len;
+            index--;
+            tureTo(index)
         },
         pause: function () {
             isPuase = true
@@ -45,8 +49,14 @@ function carousel(selector,option) {
         continue: function () {
             isPuase = false
         },
+        tureTo: tureTo,
         ele: frame
     }
+
+    if(prevBtn)prevBtn.addEventListener('mousedown',methods.prev);
+    if(nextBtn)nextBtn.addEventListener('mousedown',methods.next);
+
+    return methods
 
 }
 
@@ -56,9 +66,11 @@ carousel_frame.ele.addEventListener('mouseover', carousel_frame.pause)
 carousel_frame.ele.addEventListener('mouseout', carousel_frame.continue)
 news_carousel.ele.addEventListener('mouseover', news_carousel.pause)
 news_carousel.ele.addEventListener('mouseout', news_carousel.continue)
+
+
 document.querySelector('.news_list .list').addEventListener('mouseover', function (e) {
     var t = e.target
     var index = t.getAttribute('data-index')
     news_carousel.tureTo(index-1)
 })
-document.querySelector('.news_list .list').addEventListener('mouseout', news_carousel.continue)
+document.querySelector('.news_list .list').addEventListener('mouseout', news_carousel.continue);
