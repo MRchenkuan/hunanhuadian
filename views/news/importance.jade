@@ -12,7 +12,7 @@ block header
 block content
   .content_block.flex.col-4.flex-start
     each news in newslist
-      div.news-box(onclick="showNews('#{news.banner}')")
+      div.news-box(onclick="showNews(this)" data-banner='#{news.banner}' data-title='#{news.title}' data-content='#{news.content}')
         .img-box(style="background-image:url(#{news.banner})")
         .info-box
           p #{news.title}

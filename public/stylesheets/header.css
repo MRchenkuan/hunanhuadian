@@ -63,7 +63,8 @@ body {
           width: 100%;
           height: 1.5rem;
           bottom: 120%;
-          font-size: 1.45rem;
+          font-size: 1.4rem;
+          white-space: nowrap;
           color: #00AAE7;
           left: 0;
           background-size: contain; }

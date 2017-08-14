@@ -148,7 +148,9 @@
       padding: 0 1rem;
       font-size: 1rem;
       color: #4A4A4A;
-      line-height: 2; }
+      line-height: 2;
+      height: 6rem;
+      overflow: hidden; }
     .intro_frame .card .plus {
       position: absolute;
       right: 1rem;

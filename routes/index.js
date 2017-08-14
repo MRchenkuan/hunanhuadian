@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
           {title:'湖南华电郴州风力发电有限公司工会开展“赴一线、送清凉”活动',banner:'/public/images/home/news5@2x.jpg'}
       ],
       newsCards:[
-          {banner:"/public/images/img1@2x.jpg",title:"总经理致辞",text:"湖南华电郴州风力发电有限公司作为湖南首家风力发电企业,带动了湖南绿色清洁能源产业，拥有难得的机遇和发展空间，但同时也面对很多挑战……",url:"speech"},
+          {banner:"/public/images/img1.jpg",title:"总经理致辞",text:"湖南华电郴州风力发电有限公司作为湖南首家风力发电企业,带动了湖南绿色清洁能源产业，拥有难得的机遇和发展空间，但同时也面对很多挑战……",url:"speech"},
           {banner:"/public/images/img2@2x.jpg",title:"公司简介",text:"湖南华电郴州风力发电有限公司于2009年6月11日注册成立，是湖南省首家建设投产的风力发电公司……",url:"about"},
           {banner:"/public/images/img3@2x.jpg",title:"领导班子",text:"公司领导班子共4人，设有公司总经理兼党支部书记1人、副总经理3人……",url:"leadership"},
           {banner:"/public/images/img4@2x.jpg",title:"业务及分布",text:"公司仰天湖36.3MW风电项目于2008年8月通过湖南省发展和改革委员会核准批复，2010年1月3日投产……",url:"distribution"}
